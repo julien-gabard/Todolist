@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>TodoList</title>
+    <link rel="stylesheet" href="assets/css/font-awesome.css" />
+    <link rel="stylesheet" href="assets/css/bulma.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <div class="logo">
+          <a href="#">
+            <h1 class="title is-1">TodoList</h1>
+          </a>
+        </div>
+        <div class="filters-bar">
+          <div class="filters-bar__element buttons are-small has-addons">
+            <button class="button is-info is-selected">Toutes</button>
+            <button class="button">Complètes</button>
+            <button class="button">Incomplètes</button>
+          </div>
+          <div class="filters-bar__element select is-small">
+            <!-- Select et options générer via JS -->
+          </div>
+          <div class="filters-bar__element view-archives">
+            <a href="#">Voir les archives</a>
+          </div>
+        </div>
+      </header>
+      <main>
+        <form class="task task--add" id="form-new-task">
+          <div class="task__content">
+            <div class="task__content__name">
+              <input class="input" type="text" placeholder="Nom de la tâche" name="name" />
+            </div>
+            <div class="task__content__category">
+              <div class="select is-small">
+                <!-- Select et options générer via JS -->
+              </div>
+            </div>
+            <div class="task__content__buttons">
+              <button class="task__content__button__add button is-info">
+                <span class="icon is-small">
+                  <i class="fa fa-plus"></i>
+                </span>
+                <span>Ajouter</span>
+              </button>
+            </div>
+          </div>
+        </form>
+        <div class="tasks"></div>
+      </main>
+    </div>
+
+    <template id="template-new-task">
+      <div class="task task--todo" data-category="Todo">
+        <div class="task__content">
+          <div class="task__content__name">
+            <input class="input" type="text" value="Todo" placeholder="Nom de la tâche" name="name" />
+            <p>Todo</p>
+          </div>
+          <div class="task__content__category">
+            <p>Todo</p>
+          </div>
+          <div class="task__content__buttons">
+            <button class="task__content__button__incomplete button is-success is-small">
+              <span class="icon is-small">
+                <i class="fa fa-step-backward"></i>
+              </span>
+            </button>
+            <button class="task__content__button__desarchive button is-success is-small">
+              <span class="icon is-small">
+                <i class="fa fa-undo"></i>
+              </span>
+            </button>
+            <button class="task__content__button__validate button is-success is-small">
+              <span class="icon is-small">
+                <i class="fa fa-check-square-o"></i>
+              </span>
+            </button>
+            <button class="task__content__button__modify button is-warning is-small">
+              <span class="icon is-small">
+                <i class="fa fa-pencil-square-o"></i>
+              </span>
+            </button>
+            <button class="task__content__button__archive button is-danger is-small">
+              <span class="icon is-small">
+                <i class="fa fa-archive"></i>
+              </span>
+            </button>
+            <button class="task__content__button__delete button is-danger is-small">
+              <span class="icon is-small">
+                <i class="fa fa-trash"></i>
+              </span>
+            </button>
+          </div>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-bar__level" style="width:0%"></div>
+        </div>
+      </div>
+    </template>
+
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>

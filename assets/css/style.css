@@ -1,0 +1,233 @@
+.container {
+  padding: 0.5em;
+}
+
+.header {
+  background-color: #ededed;
+  padding: 1.2em;
+}
+
+.logo > a > .title {
+  margin-bottom: 0.5em;
+  font-size: 2em;
+}
+
+.view-archives {
+  margin-top: 1em;
+}
+
+.task {
+  margin: 1.5em 0 0 0;
+}
+
+.task__content {
+  padding: 0.5em;
+  border: solid 1px #ededed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.task__content__name {
+  font-weight: 400;
+  font-size: 0.9em;
+  width: 35%;
+}
+
+.task__content__name > input {
+  display: none;
+}
+
+.task__content__category > p {
+  font-size: 0.7em;
+  color: #b1b1b1;
+}
+
+.task__content__buttons {
+  margin-left: 1em;
+}
+
+.task__content__buttons > .button {
+  font-size: 0.9em;
+}
+
+.progress-bar {
+  height: 0.4em;
+  background-color: #ededed;
+}
+
+.progress-bar__level {
+  height: 0.4em;
+  background-color: #3298dc;
+}
+
+.task__content__button__desarchive,
+.task__content__button__incomplete,
+.task__content__button__delete {
+  display: none;
+}
+
+.task--complete .task__content__name > p {
+  text-decoration: line-through;
+}
+
+.task--complete .task__content__button__validate {
+  display: none;
+}
+
+.task--complete .task__content__button__incomplete {
+  display: inline-block;
+}
+
+.task--edit .task__content__name > p {
+  display: none;
+}
+
+.task--edit .task__content__name > input {
+  display: block;
+  width: 90%;
+}
+
+.task--archive .task__content {
+  background-color: #f7f7f7;
+  border: none;
+}
+
+.task--archive .task__content__name {
+  color: #b1b1b1;
+}
+
+.task--archive .progress-bar__level {
+  background-color: #b1b1b1;
+}
+
+.task--archive .task__content__button__validate {
+  display: none;
+}
+
+.task--archive .task__content__button__modify {
+  display: none;
+}
+
+.task--archive .task__content__button__archive {
+  display: none;
+}
+
+.task--archive .task__content__button__desarchive {
+  display: inline-block;
+}
+
+.task--archive .task__content__button__delete {
+  display: inline-block;
+}
+
+.task--add .task__content {
+  border-color: #78b6df;
+}
+
+.task--add .task__content__name {
+  width: 100%;
+}
+
+.task--add .task__content__category {
+  width: 100%;
+  margin-top: 0.5em;
+}
+
+.task--add .task__content__name > input {
+  display: block;
+  width: 90%;
+}
+
+.task--add .task__content__buttons {
+  margin: 0.5em 0 0 0;
+}
+
+.task--add .task__content__buttons > button {
+  font-size: 1em;
+}
+
+.task--complete .progress-bar__level {
+  background-color: #2EC46D;
+}
+
+@media screen and (min-width: 640px) {
+  .container {
+    padding: 1em;
+  }
+
+  .task__content {
+    padding: 1em;
+  }
+
+  .task__content__name {
+    font-size: 1em;
+  }
+
+  .task__content__category > p {
+    font-size: 0.8em;
+  }
+
+  .task__content__category {
+    font-size: 1em;
+  }
+
+  .task__content__buttons > .button {
+    font-size: 0.9em;
+  }
+
+  .task--add .task__content__name {
+    width: 50%;
+  }
+
+  .task--add .task__content__category {
+    margin: 0;
+    width: 30%;
+  }
+
+  .task--add .task__content__buttons {
+    width: 20%;
+    text-align: right;
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo > a > .title {
+    margin-bottom: 0;
+  }
+
+  .filters-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .filters-bar__element {
+    margin-left: 1em;
+    margin-top: 0;
+  }
+
+  .filters-bar > .buttons {
+    margin-bottom: 0;
+    margin-top: 0.5em;
+  }
+
+  .task__content__name {
+    width: 50%;
+  }
+
+  .task__content__name > input {
+    width: 60%;
+  }
+
+  .task__content__buttons > .button {
+    font-size: 1em;
+  }
+}
