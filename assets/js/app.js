@@ -42,7 +42,7 @@ let app = {
     // Méthodes de récupération des datas depuis l'API *lumen(laravel)*
     //--------------------------------------------------------------------
 
-    apiBaseUrl: 'http://54.167.206.247/Todolist-api/',// <- l'URL de l'API lumen
+    apiBaseUrl: 'http://localhost:8080/',// <- l'URL de l'API lumen
 
     fetchData: function() {// <- réunie l'appel a l'API de catégorie et tâche
         app.fetchCategories();
