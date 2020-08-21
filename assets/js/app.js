@@ -519,7 +519,6 @@ let app = {
                 }
             }
             fetch(app.apiBaseUrl + 'tasks/' + taskId, fetchOptions)
-            .then(app.convertJSONtoJS)
             .then(function(response){
                 taskElement.remove();
                 console.log('Tâche supprimée');
